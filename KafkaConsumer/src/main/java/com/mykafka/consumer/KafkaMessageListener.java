@@ -11,7 +11,7 @@ public class KafkaMessageListener {
 
     Logger logger = LoggerFactory.getLogger(KafkaMessageListener.class);
 
-    @KafkaListener(topics = "kafkaDemo7", groupId = "kafka-demo-group4")
+    @KafkaListener(topics = "kafkaDemo8", groupId = "kafka-demo-group5")
     public void consumeEvents(Customer customer){
 
         logger.info("consumer consumed the message {}",customer.toString());
