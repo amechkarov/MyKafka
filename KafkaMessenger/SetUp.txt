@@ -1,0 +1,33 @@
+## I Downloads
+
+1. Download kafka -> https://kafka.apache.org/downloads
+2. Unarchive files
+3. Download & Install Offset Explorer -> https://www.kafkatool.com/download.html
+
+## II Start Zookeeper and Kafka Server
+
+Start zookeeper ->  .\zookeeper-server-start.bat ..\..\config\zookeeper.properties
+Zookeeper works on port : 2181
+
+
+Start kafka server -> ./kafka-server-start.bat ../../config/server.properties
+Kafka Server/Broker works on port : 9092
+
+
+## III Create Topic , partitions and replication factor
+--bootstrap.server - is the kafka server 
+Creation -> ./kafka-topics.bat --bootstrap-server localhost:9092 --create --topic kafkaFirst-topic --partitions 3 --replication-factor 1
+
+Show topics -> ./kafka-topics.bat --bootstrap-server localhost:9092 -list
+
+More details for a topic - > ./kafka-topics.bat --bootstrap-server localhost:9092 --describe --topic kafkaSecond-topic
+
+To monitor what we have created
+1. Open Offset Explorer
+2. Create a connection with the details from above
+
+## IV Start Producer and Consumer
+1. Start producer - > ./kafka-console-producer.bat --broker-list localhost:9092 --topic kafkaFirst-topic
+2. Start Consumer -> ./kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic kafkaFirst-topic --from-beginning
+3. Send message from the consumer
+4. Go to Offset Explorer check for data
