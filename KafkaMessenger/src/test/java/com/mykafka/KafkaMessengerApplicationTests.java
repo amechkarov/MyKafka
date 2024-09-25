@@ -1,4 +1,4 @@
-package com.example.KafkaMessenger;
+package com.mykafka;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

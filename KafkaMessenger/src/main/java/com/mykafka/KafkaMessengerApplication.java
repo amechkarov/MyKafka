@@ -1,4 +1,4 @@
-package com.example.KafkaMessenger;
+package com.mykafka;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
